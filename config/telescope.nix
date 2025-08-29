@@ -1,6 +1,15 @@
 {
   plugins = {
     telescope.enable = true;
+    todo-comments = {
+      enable = true;
+      keymaps = {
+        todoTelescope = {
+          key = "<leader>st";
+          keywords = ["TODO"];
+        };
+      };
+    };
   };
 
   keymaps = [
@@ -38,6 +47,13 @@
       options = {
         desc = "[S]earch [R]esume";
       };
+    }
+
+    {
+      mode = "n";
+      key = "<leader>sd";
+      action = "<CMD>Telescope diagnostics<CR>";
+      options.desc = "[S]earch [D]iagnostics";
     }
   ];
 }
