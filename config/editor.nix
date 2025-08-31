@@ -7,7 +7,6 @@ let
 in
   {pkgs, ...}: {
     plugins = {
-      luasnip.enable = true;
       treesitter = {
         enable = true;
 
@@ -36,6 +35,7 @@ in
         };
       };
 
+      # autocompletions
       cmp = {
         enable = true;
         settings = {
@@ -125,7 +125,14 @@ in
         };
       };
 
-      cmp-nvim-lsp.enable = true;
+      # Snippet engine & its associated nvim-cmp source
+      luasnip.enable = true;
       cmp_luasnip.enable = true;
+
+      # adds LSP completion capabilities
+      cmp-nvim-lsp.enable = true;
+
+      # TODO: add friendly-snippets
+      # Adds a number of user-friendly snippets
     };
   }
