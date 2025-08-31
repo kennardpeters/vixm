@@ -20,6 +20,18 @@ in {
       clipboard = "unnamedplus";
       # ignore case when searching
       ignorecase = true;
+      hlsearch = false;
+      breakindent = true;
+      undofile = true;
+      smartindent = true;
+      termguicolors = true;
+
+      completeopt = "menuone,noselect";
+
+      expandtab = true;
+      shiftround = true;
+      shiftwidth = 2;
+      tabstop = 2;
     };
 
     keymaps = [
