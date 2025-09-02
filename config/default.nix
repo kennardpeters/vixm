@@ -9,6 +9,7 @@ in {
     ./themes.nix
     ./git.nix
     ./editor.nix
+    ./lsp.nix
   ];
 
   ## TODO: what is needed next?

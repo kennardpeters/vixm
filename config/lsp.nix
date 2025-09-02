@@ -26,7 +26,9 @@
       };
       servers = {
         nixd.enable = true;
+        nil_ls.enable = true;
       };
     };
+    fidget.enable = true;
   };
 }
