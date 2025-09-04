@@ -27,8 +27,10 @@
       servers = {
         nixd.enable = true;
         nil_ls.enable = true;
+        gopls.enable = true;
       };
     };
     fidget.enable = true;
+    lazydev.enable = true;
   };
 }
