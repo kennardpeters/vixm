@@ -33,7 +33,7 @@
       enable = true;
       settings = {
         keymap = {
-          preset = "default";
+          preset = "enter";
         };
         completion = {
           documentation = {
