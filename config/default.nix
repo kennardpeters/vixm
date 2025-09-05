@@ -1,5 +1,5 @@
-{inputs, ...}: let
-  pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
+{inputs, system, ...}: let
+  pkgs = inputs.nixpkgs.legacyPackages.${system};
 in {
   # Import all your configuration modules here
   imports = [
