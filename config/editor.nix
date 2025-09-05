@@ -15,6 +15,7 @@
       # Example of another treesitter-related plugin
     };
     treesitter-textobjects.enable = true;
+    treesitter-context.enable = true;
 
     ## For adding proper indentation
     mini = {
