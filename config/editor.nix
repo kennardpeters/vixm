@@ -72,4 +72,15 @@
     # TODO: add friendly-snippets
     # Adds a number of user-friendly snippets
   };
+  # highlight on yank
+  extraConfigLua = ''
+    local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
+    vim.api.nvim_create_autocmd("TextYankPost", {
+      callback = function()
+        vim.highlight.on_yank()
+      end,
+      group = highlight_group,
+      pattern = "*",
+    })
+  '';
 }
