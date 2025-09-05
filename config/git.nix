@@ -2,6 +2,7 @@
   plugins = {
     ## TODO: Find better highlighting options for this
     lazygit.enable = true;
+    fugitive.enable = true;
   };
 
   keymaps = [
