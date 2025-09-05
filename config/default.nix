@@ -10,6 +10,7 @@ in {
     ./git.nix
     ./editor.nix
     ./lsp.nix
+    ./gonvim.nix
   ];
 
   ## TODO: what is needed next?

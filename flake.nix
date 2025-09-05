@@ -22,8 +22,15 @@
       ];
 
       perSystem = {system, ...}: let
+        # Example if not in vimPlugins
+        #gonvim = builtins.fetchGit {
+        #  url = "https://github.com/ray-x/go.nvim";
+        #  # Always pin to a specific revision (commit hash) for reproducibility
+        #  rev = "2f7cd3a20a2940320d5cad338722601ffa3ce31b";
+        #};
         nixvimLib = nixvim.lib.${system};
         nixvim' = nixvim.legacyPackages.${system};
+
         nixvimModule = {
           inherit system; # or alternatively, set `pkgs`
           module = import ./config; # import the module directly
@@ -34,6 +41,7 @@
         };
         nvim = nixvim'.makeNixvimWithModule nixvimModule;
       in {
+
         checks = {
           # Run `nix flake check .` to verify that your config is not broken
           default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;

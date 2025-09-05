@@ -5,7 +5,7 @@
 
       folding = false;
       settings = {
-        ensure_installed = ["nix" "lua" "rust"];
+        ensure_installed = ["nix" "lua" "rust" "go"];
         # Further configuration options for nvim-treesitter
         highlight = {enable = true;};
         indent = {
