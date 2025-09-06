@@ -11,9 +11,14 @@ in {
     ./editor.nix
     ./lsp.nix
     ./gonvim.nix
+    ./debugger.nix
   ];
 
   ## TODO: what is needed next?
+  ## rust debugging
+  ## git signs
+  ## which-key
+  ## avante
   config = {
     globals.mapleader = " ";
 
