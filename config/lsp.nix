@@ -14,7 +14,7 @@
           "K" = "hover";
           "gD" = "declaration";
           "gd" = "definition";
-          "gr" = "references"; # Might want to change this to telescope references instead
+          "gR" = "references"; # Might want to change this to telescope references instead
           "gI" = "implementation";
           "gy" = "type_definition";
           "<leader>ca" = "code_action";

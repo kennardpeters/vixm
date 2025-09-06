@@ -12,12 +12,12 @@ in {
     ./lsp.nix
     ./gonvim.nix
     ./debugger.nix
+    ./which-key.nix
   ];
 
   ## TODO: what is needed next?
   ## rust debugging
   ## git signs
-  ## which-key
   ## avante
   config = {
     globals.mapleader = " ";

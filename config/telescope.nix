@@ -55,5 +55,17 @@
       action = "<CMD>Telescope diagnostics<CR>";
       options.desc = "[S]earch [D]iagnostics";
     }
+    {
+      mode = "n";
+      key = "<leader>gr";
+      action = "<CMD>Telescope lsp_references<CR>";
+      options.desc = "[G]oto [R]eferences";
+    }
+    {
+      mode = "n";
+      key = "<leader>gi";
+      action = "<CMD>Telescope lsp_implementations<CR>";
+      options.desc = "[G]oto [I]mplementation";
+    }
   ];
 }
