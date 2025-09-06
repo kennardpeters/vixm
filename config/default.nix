@@ -17,7 +17,6 @@ in {
 
   ## TODO: what is needed next?
   ## rust debugging
-  ## git signs
   ## avante
   config = {
     globals.mapleader = " ";
