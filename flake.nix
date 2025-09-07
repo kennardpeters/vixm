@@ -23,11 +23,11 @@
 
       perSystem = {system, ...}: let
         # Example if not in vimPlugins
-        #gonvim = builtins.fetchGit {
-        #  url = "https://github.com/ray-x/go.nvim";
-        #  # Always pin to a specific revision (commit hash) for reproducibility
-        #  rev = "2f7cd3a20a2940320d5cad338722601ffa3ce31b";
-        #};
+        # guihua = builtins.fetchGit {
+        #   url = "https://github.com/ray-x/guihua.lua";
+        #   # Always pin to a specific revision (commit hash) for reproducibility
+        #   rev = "87bea7b98429405caf2a0ce4d029b027bb017c70";
+        # };
         nixvimLib = nixvim.lib.${system};
         nixvim' = nixvim.legacyPackages.${system};
 
@@ -36,12 +36,11 @@
           module = import ./config; # import the module directly
           # You can use `extraSpecialArgs` to pass additional arguments to your module files
           extraSpecialArgs = {
-            inherit inputs system; 
-         };
+            inherit inputs system;
+          };
         };
         nvim = nixvim'.makeNixvimWithModule nixvimModule;
       in {
-
         checks = {
           # Run `nix flake check .` to verify that your config is not broken
           default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;

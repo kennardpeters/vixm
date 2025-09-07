@@ -1,6 +1,9 @@
 {
   plugins = {
-    telescope.enable = true;
+    telescope = {
+      enable = true;
+      extensions.fzy-native.enable = true;
+    };
     todo-comments = {
       enable = true;
       keymaps = {
@@ -68,4 +71,7 @@
       options.desc = "[G]oto [I]mplementation";
     }
   ];
+  extraConfigLua = ''
+    require('telescope').load_extension('fzy_native')
+  '';
 }

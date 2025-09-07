@@ -4,16 +4,36 @@
       plugin = go-nvim;
       config = ''lua require("go").setup()'';
     }
+
+    (pkgs.vimUtils.buildVimPlugin {
+      name = "guihua";
+      src = pkgs.fetchFromGitHub {
+        owner = "ray-x";
+        repo = "guihua.lua";
+        rev = "87bea7b98429405caf2a0ce4d029b027bb017c70"; 
+        sha256 = "sha256-R/ckeCwzWixvL7q2+brvqcvfSK9Mx8pu6zOFgh2lde4="; 
+      };
+      meta = {description = "A GUI library for Neovim plugin developers.";};
+      # Needed for plugin to work correctly
+      buildPhase = ''
+        (
+          cd lua/fzy
+          make
+        )
+      '';
+      # TODO: May need to use overrideAttrs here:
+      nvimSkipModules = ["fzy.fzy-lua-native"];
+    })
   ];
   extraConfigLua = ''
-      local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
-      vim.api.nvim_create_autocmd("BufWritePre", {
-        pattern = "*.go",
-        callback = function()
-          require('go.format').goimports()
-        end,
-        group = format_sync_grp,
-      })
+    local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      pattern = "*.go",
+      callback = function()
+        require('go.format').goimports()
+      end,
+      group = format_sync_grp,
+    })
   '';
   keymaps = [
     # Go run test

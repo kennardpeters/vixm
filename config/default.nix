@@ -1,4 +1,8 @@
-{inputs, system, ...}: let
+{
+  inputs,
+  system,
+  ...
+}: let
   pkgs = inputs.nixpkgs.legacyPackages.${system};
 in {
   # Import all your configuration modules here
@@ -18,6 +22,7 @@ in {
   ## TODO: what is needed next?
   ## rust debugging
   ## avante
+  ## copilot
   config = {
     globals.mapleader = " ";
 
@@ -63,6 +68,7 @@ in {
 
     extraPackages = with pkgs; [
       gcc
+      fzy
     ];
   };
 }
