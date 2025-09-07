@@ -53,7 +53,7 @@
     {
       mode = "n";
       key = "<leader>rd";
-      action = ":GoTestFunc -v<CR>";
+      action = ":GoTestFunc -v -F<CR>";
       options = {
         silent = true;
         desc = "Run Go Test w/ Detail";
