@@ -1,4 +1,4 @@
-# Nixvim template
+# Declarative Neovim Config 
 
 ## Testing your new configuration
 
