@@ -17,12 +17,17 @@ in {
     ./gonvim.nix
     ./debugger.nix
     ./which-key.nix
+    ./avante.nix
   ];
 
-  ## TODO: what is needed next?
+  # TODO: what is needed next?
   ## rust debugging
   ## avante
   ## copilot
+  # Advanced
+  ## Autocmd for specific languages (Go tests vs Rust tests...)
+  ## Hacker-man theme
+  ## elixir-purple theme
   config = {
     globals.mapleader = " ";
 

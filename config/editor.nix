@@ -12,9 +12,10 @@
           enable = true;
         };
       };
-      # Example of another treesitter-related plugin
     };
+    # Example of another treesitter-related plugin
     treesitter-textobjects.enable = true;
+    # Plugin to enable freezing of function headers
     treesitter-context.enable = true;
 
     ## For adding proper indentation
@@ -48,11 +49,17 @@
             "path"
             "snippets"
             "lazydev"
+            "avante"
           ];
           providers = {
             lazydev = {
               module = "lazydev.integrations.blink";
               score_offset = 100;
+            };
+            avante = {
+              module = "blink-cmp-avante";
+              name = "Avante";
+              opts = {};
             };
           };
         };

@@ -22,6 +22,7 @@
         )
       '';
       # TODO: May need to use overrideAttrs here:
+      # ref: https://github.com/ray-x/guihua.lua/issues/28
       nvimSkipModules = ["fzy.fzy-lua-native"];
     })
   ];
