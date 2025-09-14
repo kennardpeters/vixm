@@ -79,6 +79,9 @@
 
     # TODO: add friendly-snippets
     # Adds a number of user-friendly snippets
+   
+    # Adds markdown rendering to nvim 
+    render-markdown.enable = true;
   };
   # highlight on yank
   extraConfigLua = ''
