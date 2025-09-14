@@ -28,6 +28,7 @@
         nixd.enable = true;
         nil_ls.enable = true;
         gopls.enable = true;
+        lua_ls.enable = true;
       };
     };
     fidget.enable = true;
