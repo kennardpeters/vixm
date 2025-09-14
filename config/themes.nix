@@ -4,6 +4,10 @@
       enable = true;
       settings = {
         style = "moon"; # moon, storm, night, day
+        styles = {
+          floats = "transparent";
+          sidebars = "transparent";
+        };
         transparent = true;
       };
     };
