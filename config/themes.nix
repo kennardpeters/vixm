@@ -1,13 +1,20 @@
 {pkgs, ...}: {
   colorschemes = {
-    onedark = {
+    tokyonight = {
       enable = true;
       settings = {
-        colors = {yellow = "#03f4fc";};
-        style = "dark";
+        style = "moon"; # moon, storm, night, day
         transparent = true;
       };
     };
+    #onedark = {
+    #  enable = true;
+    #  settings = {
+    #    colors = {yellow = "#03f4fc";};
+    #    style = "dark";
+    #    transparent = true;
+    #  };
+    #};
   };
   # extraPlugins = with pkgs.vimPlugins; [
   #   {
