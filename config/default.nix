@@ -69,6 +69,12 @@ in {
         action = "<CMD>vsplit<CR>";
         options.desc = "Split Window [V]ertically";
       }
+      {
+        mode = "n";
+        key = "<leader>h";
+        action = "<CMD>wincmd s<CR>";
+        options.desc = "Split Window [H]orizontally";
+      }
     ];
 
     extraPackages = with pkgs; [
