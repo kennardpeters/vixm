@@ -29,6 +29,8 @@
         nil_ls.enable = true;
         gopls.enable = true;
         lua_ls.enable = true;
+        elixirls.enable = true;
+        rust_analyzer.enable = true;
       };
     };
     fidget.enable = true;
