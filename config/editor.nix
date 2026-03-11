@@ -63,6 +63,7 @@
             "snippets"
             "lazydev"
             "avante"
+            "copilot"
           ];
           providers = {
             lazydev = {
@@ -72,6 +73,14 @@
             avante = {
               module = "blink-cmp-avante";
               name = "Avante";
+              opts = {};
+            };
+            copilot = {
+              async = true;
+              module = "blink-copilot";
+              name = "copilot";
+              score_offset = 100;
+              # Optional configurations
               opts = {};
             };
           };
@@ -86,14 +95,17 @@
         };
       };
     };
+    blink-cmp-copilot.enable = true;
+    blink-copilot.enable = true;
+    # copilot.enable = true;
 
     # Snippet engine & its associated nvim-cmp source
     luasnip.enable = true;
 
     # TODO: add friendly-snippets
     # Adds a number of user-friendly snippets
-   
-    # Adds markdown rendering to nvim 
+
+    # Adds markdown rendering to nvim
     render-markdown.enable = true;
   };
   # highlight on yank
