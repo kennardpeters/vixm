@@ -27,10 +27,10 @@
       servers = {
         nixd.enable = true;
         nil_ls.enable = true;
-        gopls.enable = true;
         lua_ls.enable = true;
         elixirls.enable = true;
         rust_analyzer.enable = true;
+        # NOTE: Not enabling gopls since this is already included in the gonvim plugin
       };
     };
     fidget.enable = true;
