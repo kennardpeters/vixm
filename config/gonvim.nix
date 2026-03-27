@@ -2,7 +2,7 @@
   extraPlugins = with pkgs.vimPlugins; [
     {
       plugin = go-nvim;
-      config = ''lua require("go").setup({ lsp_cfg = true })'';
+      config = ''lua require("go").setup({ lsp_cfg = true, lsp_keymaps = false })'';
     }
 
     (pkgs.vimUtils.buildVimPlugin {
